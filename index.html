@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raredeon Platforms</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #000;
+      color: #0aaff0;
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    header img {
+      max-width: 180px;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+    }
+
+    header h2 {
+      color: #0aaff0;
+      font-weight: 400;
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    nav {
+      background: #111;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    .logo {
+      color: #0aaff0;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    .burger {
+      font-size: 28px;
+      cursor: pointer;
+      color: #0aaff0;
+      display: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #0aaff0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    @media screen and (max-width: 768px) {
+      .burger {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #111;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h3 {
+      color: #0aaff0;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .tagline {
+      font-size: 1.4rem;
+      color: #0aaff0;
+      text-align: center;
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    .services, .vision {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .card {
+      background: #111;
+      padding: 20px;
+      flex: 1;
+      min-width: 250px;
+      border: 1px solid #0aaff0;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #0aaff0;
+      color: #666;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      background: #0aaff0;
+      color: #000;
+      padding: 10px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a.button:hover {
+      background: #007cba;
+      color: white;
+    }
+    .contact-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border: 1px solid #0aaff0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00d2ff;
+  box-shadow: 0 0 5px #00d2ff66;
+}
+
+.contact-form .button {
+  background-color: #0aaff0;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form .button:hover {
+  background-color: #0088cc;
+}
+
+.direct-contact {
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Raredeon Platforms Logo">
+    <h1>RAREDEON PLATFORMS</h1>
+    <h2 class="tagline">The Inevitable. Innovative. Incredible.</h2>
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <div class="logo">RAREDEON</div>
+      <div class="burger" onclick="toggleMenu()">&#9776;</div>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#vision">Vision</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="about">
+    <h3>About Us</h3>
+    <p>Raredeon Platforms is a division of RareXTechiez (OPC) Private Limited, dedicated to pioneering future-ready digital ecosystems. We focus on developing scalable platforms powered by artificial intelligence, automation, and immersive technologies to empower the next era of human-tech interaction.</p>
+  </section>
+
+  <section id="services">
+    <h3>Our Services</h3>
+    <div class="services">
+      <div class="card">
+        <h4>Platform Engineering</h4>
+        <p>Design and deploy intelligent platforms across web, mobile, and hybrid environments, built to scale.</p>
+      </div>
+      <div class="card">
+        <h4>AI & Intelligent Systems</h4>
+        <p>Leverage AI-powered tools and assistants, including local LLMs, automation, and contextual interaction frameworks.</p>
+      </div>
+      <div class="card">
+        <h4>Interface Design</h4>
+        <p>Create seamless, futuristic user interfaces and experiences, from animated avatars to reactive design systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="vision">
+    <h3>Our Vision</h3>
+    <div class="vision">
+      <div class="card">
+        <p>Raredeon Platforms envisions a hyper-connected future where every interface, device, and experience is intelligent, adaptive, and human-centered. Our mission is to become the backbone of this transformation by crafting resilient, immersive, and AI-driven technologies for the world.</p>
+      </div>
+    </div>
+  </section>
+
+ <section id="contact" class="section contact-section">
+  <h3>Contact Us</h3>
+  <p>We’d love to hear from you! Fill out the form below or reach us directly.</p>
+
+  <form action="mailto:contact@raredeon.com" method="POST" enctype="text/plain" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit" class="button">Send Message</button>
+  </form>
+
+  <div class="direct-contact">
+    <p><strong>Email:</strong> <a href="mailto:contact@raredeon.com">contact@raredeon.com</a></p>
+    <p><strong>Phone:</strong> +91-9731383927</p>
+    <p><strong>Website:</strong> <a href="https://raredeon.com" style="color:#0aaff0;">raredeon.com</a></p>
+  </div>
+</section>
+
+
+  <footer>
+    &copy; 2025 Raredeon Platforms | RareXTechiez (OPC) Pvt. Ltd. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
